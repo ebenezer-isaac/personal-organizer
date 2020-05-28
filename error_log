@@ -1,0 +1,4 @@
+[24-Mar-2020 23:42:14 Asia/Calcutta] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u117204720/domains/ebenezer-isaac.com/public_html/organizer/side.php on line 3
+[24-Mar-2020 23:42:15 Asia/Calcutta] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u117204720/domains/ebenezer-isaac.com/public_html/organizer/end.php on line 3
+[24-Mar-2020 23:43:06 Asia/Calcutta] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u117204720/domains/ebenezer-isaac.com/public_html/organizer/side.php on line 3
+[24-Mar-2020 23:43:06 Asia/Calcutta] PHP Notice:  session_start(): A session had already been started - ignoring in /home/u117204720/domains/ebenezer-isaac.com/public_html/organizer/end.php on line 3
