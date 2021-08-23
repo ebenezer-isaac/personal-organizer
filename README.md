@@ -1,2 +1,2 @@
 # personal-organizer
-Personal Organizer for Time and Expense Management based on PHP. 
+Personal Organizer for Time and Expense Management with Graphical Report Generation based on MERN Stack. 
