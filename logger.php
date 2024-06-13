@@ -3,7 +3,8 @@
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 date_default_timezone_set('Asia/Kolkata');
 
-function getOS() {
+function getOS()
+{
     global $user_agent;
     $os_platform = "Unknown OS Platform";
     $os_array = array(
@@ -38,7 +39,8 @@ function getOS() {
     return $os_platform;
 }
 
-function getBrowser() {
+function getBrowser()
+{
     global $user_agent;
     $browser = "Unknown Browser";
     $browser_array = array(
@@ -59,7 +61,8 @@ function getBrowser() {
     return $browser;
 }
 
-function ip_get($allow_private = false) {
+function ip_get($allow_private = false)
+{
     $proxy_ip = ['127.0.0.1'];
     $header = 'HTTP_X_FORWARDED_FOR';
     if (ip_check($_SERVER['REMOTE_ADDR'], $allow_private, $proxy_ip))
@@ -73,7 +76,8 @@ function ip_get($allow_private = false) {
     return null;
 }
 
-function ip_check($ip, $allow_private = false, $proxy_ip = []) {
+function ip_check($ip, $allow_private = false, $proxy_ip = [])
+{
     if (!is_string($ip) || is_array($proxy_ip) && in_array($ip, $proxy_ip))
         return false;
     $filter_flag = FILTER_FLAG_NO_RES_RANGE;
@@ -105,18 +109,18 @@ try {
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO track_log VALUES (null,"
-            . "'" . mysqli_real_escape_string($conn, date('Y-m-d H:i:s')) . "', "
-            . "'" . mysqli_real_escape_string($conn, $cname) . "', "
-            . "'" . mysqli_real_escape_string($conn, $ip) . "', "
-            . "'" . mysqli_real_escape_string($conn, $city) . "', "
-            . "'" . mysqli_real_escape_string($conn, $region) . "', "
-            . "'" . mysqli_real_escape_string($conn, $country) . "', "
-            . "'" . mysqli_real_escape_string($conn, $zip) . "', "
-            . "'" . mysqli_real_escape_string($conn, $isp) . "', "
-            . "'" . mysqli_real_escape_string($conn, $user_os) . "', "
-            . "'" . mysqli_real_escape_string($conn, $user_browser) . "', "
-            . "'" . mysqli_real_escape_string($conn, $page) . "');";
+    $sql = "INSERT INTO track_log (user_count, date_time, page, hostname, ip, isp, city, region, country, zip, browser, os) VALUES (null,"
+        . "'" . mysqli_real_escape_string($conn, date('Y-m-d H:i:s')) . "', "
+        . "'" . mysqli_real_escape_string($conn, $page) . "', "
+        . "'" . mysqli_real_escape_string($conn, $cname) . "', "
+        . "'" . mysqli_real_escape_string($conn, $ip) . "', "
+        . "'" . mysqli_real_escape_string($conn, $isp) . "', "
+        . "'" . mysqli_real_escape_string($conn, $city) . "', "
+        . "'" . mysqli_real_escape_string($conn, $region) . "', "
+        . "'" . mysqli_real_escape_string($conn, $country) . "', "
+        . "'" . mysqli_real_escape_string($conn, $zip) . "', "
+        . "'" . mysqli_real_escape_string($conn, $user_browser) . "', "
+        . "'" . mysqli_real_escape_string($conn, $user_os). "');";
     $conn->query($sql);
     $conn->close();
 } catch (Exception $e) {
