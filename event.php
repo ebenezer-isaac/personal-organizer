@@ -12,7 +12,7 @@ if (isset($_SESSION["userid"])) {
             <div class = 'table-responsive'>
                 <?php
                 $event_id = filter_input(INPUT_GET, "id");
-                $servername = "sql290.main-hosting.eu";
+                $servername = "srv677.hstgr.io";
                 $username = "u117204720_organizer";
                 $password = "w:i#FgVx";
                 $dbname = "u117204720_organizer";

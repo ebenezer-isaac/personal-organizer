@@ -11,7 +11,7 @@ if ($temp == "'''='") {
     echo "2";
 } else {
     $hashed = hash('sha256', $pass);
-    if ($email == "contact@ebenezer-isaac.com" && $hashed == "310c8b4c4ed9d17b8118e29677ab215ec7899c6de19088e028556343d3d39f0f") {
+    if ($email == "contact@ebenezer-isaac.com" && $hashed == "06b03fa276676b1da2acecb5475baddbd4037805b8189c362326ed59e535da29") {
         session_start();
         $_SESSION["userid"]="ebenezer";
         echo "1";

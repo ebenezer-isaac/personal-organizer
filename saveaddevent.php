@@ -12,7 +12,7 @@ if (isset($_SESSION["userid"])) {
     $desc = filter_input(INPUT_POST, "desc");
     $expense = filter_input(INPUT_POST, "expense");
     $type = filter_input(INPUT_POST, "type");
-    $servername = "sql290.main-hosting.eu";
+    $servername = "srv677.hstgr.io";
     $username = "u117204720_organizer";
     $password = "w:i#FgVx";
     $dbname = "u117204720_organizer";
