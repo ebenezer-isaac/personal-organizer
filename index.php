@@ -49,8 +49,8 @@ if (isset($_SESSION["userid"])) {
         <meta property="og:url" content="https://demo.mycrolinks.com/personal-organizer/" />
         <meta property="og:description" content="Logging and Analytics">
         <meta content="https://www.mycrolinks.com/images/logo.png" property="og:image">
-        <meta content="2000" property="og:image:width">
-        <meta content="2000" property="og:image:height">
+        <meta content="750" property="og:image:width">
+        <meta content="750" property="og:image:height">
         <meta property="og:type" content="website" />
         <title>Login </title>
         <script src="https://kit.fontawesome.com/1ca2da442a.js" crossorigin="anonymous"></script>
