@@ -1,6 +1,6 @@
 <?php
 $page = "Organizer Event";
-include "logger.php";
+include "../web-traffic-analysis/logger.php";
 date_default_timezone_set("Asia/Calcutta");
 session_start();
 if (isset($_SESSION["userid"])) {

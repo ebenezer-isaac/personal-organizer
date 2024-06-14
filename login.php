@@ -1,6 +1,6 @@
 <?php
 $page = "Organizer Login";
-include "logger.php";
+include "../web-traffic-analysis/logger.php";
 $email = filter_input(INPUT_GET, "email");
 $pass = filter_input(INPUT_GET, "pwd");
 $temp = $pass;

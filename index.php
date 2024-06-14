@@ -1,6 +1,6 @@
 <?php
 $page = "Organizer Index";
-include "logger.php";
+include "../web-traffic-analysis/logger.php";
 session_start();
 if (isset($_SESSION["userid"])) {
     echo "<script>window.location.replace('main.php');</script>";
